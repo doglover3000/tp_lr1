@@ -22,15 +22,21 @@ public:
 	void setPurpose(string& purp);
 	void setPrice(double& price);
 
+	string getName();
+	string getType();
+	string getColour();
+	string getPurpose();
+	double getPrice();
+
 	virtual int GetID() override;
 	virtual string GetInfo() override;
 	virtual void Edit() override;
 
 private:
-	Object object;
-	string type;
-	string colour;
-	string purpose;
-	double price;
+	Object _object;
+	string _type;
+	string _colour;
+	string _purpose;
+	double _price;
 
 };

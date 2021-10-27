@@ -24,18 +24,25 @@ public:
 	void setPageCount(int& pages);
 	void setPrice(double& price);
 
+	string getName();
+	string getReleaseDate();
+	string getDescription();
+	string getGenre();
+	int getYear();
+	int getNumberofPages();
+	double getPrice();
+
 	virtual int GetID() override;
 	virtual string GetInfo() override;
 	virtual void Edit() override;
 
 private:
-	Object object;
-	string name;
-	int year;
-	string release;
-	string descrip;
-	string genre;
-	int page_cnt;
-	double price;
+	Object _object;
+	int _year;
+	string _release;
+	string _descrip;
+	string _genre;
+	int _page_cnt;
+	double _price;
 
 };

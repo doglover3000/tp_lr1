@@ -6,6 +6,7 @@ using namespace std;
 class Object
 {
 public:
+	Object();
 	explicit Object(string& objName);
 	~Object();
 

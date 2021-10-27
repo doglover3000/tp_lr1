@@ -26,18 +26,25 @@ public:
 	void setPageCount(int& pages);
 	void setPrice(double& price);
 
+	string getName();
+	string getAuthor();
+	string getSchool();
+	int getYear();
+	int getYearofStudy();
+	int getPageCount();
+	double getPrice();
+
 	virtual int GetID() override;
 	virtual string GetInfo() override;
 	virtual void Edit() override;
 
 private:
-	Object object;
-	string name;
-	string author;
-	int year;
-	string school;
-	int study_year;
-	int page_cnt;
-	double price;
+	Object _object;
+	string _author;
+	int _year;
+	string _school;
+	int _study_year;
+	int _page_cnt;
+	double _price;
 
 };
