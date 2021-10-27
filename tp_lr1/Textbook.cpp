@@ -92,14 +92,51 @@ double Textbook::getPrice()
 
 int Textbook::GetID()
 {
-	return 0;
+	return 2;
 }
 
-string Textbook::GetInfo()
+void Textbook::GetInfo()
 {
-	return string();
+	cout << "Название книги: " << _object.getName() << endl;
+	cout << "Автор: " << _author << endl;
+	cout << "Год выпуска: " << _year << endl;
+	cout << "Для какого учебного заведения предназначено: " << _school << endl;
+	cout << "Год обучения: " << _study_year << endl;
+	cout << "Объем страниц: " << _page_cnt << endl;
+	cout << "Цена: " << _price << endl;
 }
 
 void Textbook::Edit()
 {
+	string line;
+	int num;
+	double dnum;
+
+	cout << "Введите наименование: ";
+	cin >> line;
+	_object.name(line);
+
+	cout << "Введите автора: ";
+	cin >> line;
+	_author = line;
+
+	cout << "Год: ";
+	cin >> num;
+	_year = num;
+
+	cout << "Введите учебное заведение: ";
+	cin >> line;
+	_school = line;
+
+	cout << "Введите год обучения: ";
+	cin >> num;
+	_study_year = num;
+
+	cout << "Введите объем страниц: ";
+	cin >> num;
+	_page_cnt = num;
+
+	cout << "Введите цену: ";
+	cin >> dnum;
+	_price = dnum;
 }

@@ -2,18 +2,18 @@
 
 Book::Book()
 {
-	int year = 0;
-	string release = "no release date";
-	string descrip = "no book description";
-	string genre = "no genre";
-	int page_cnt = 0;
-	double price = 0;
+	_year = 0;
+	_author = "no author date";
+	_descrip = "no book description";
+	_genre = "no genre";
+	_page_cnt = 0;
+	_price = 0;
 }
 
 Book::~Book()
 {
 	_object.~Object();
-	_release.~basic_string();
+	_author.~basic_string();
 	_descrip.~basic_string();
 	_genre.~basic_string();
 }
@@ -28,9 +28,9 @@ void Book::setYear(int& year)
 	_year = year;
 }
 
-void Book::setReleaseDate(string& release)
+void Book::setAuthor(string& auth)
 {
-	_release = release;
+	_author = auth;
 }
 
 void Book::setDescription(string& desc)
@@ -58,9 +58,9 @@ string Book::getName()
 	return _object.getName();
 }
 
-string Book::getReleaseDate()
+string Book::getAuthor()
 {
-	return _release;
+	return _author;
 }
 
 string Book::getDescription()
@@ -93,16 +93,53 @@ double Book::getPrice()
 
 int Book::GetID()
 {
-	return 0;
+	return 1;
 }
 
-string Book::GetInfo()
+void Book::GetInfo()
 {
-	return string();
+	cout << "Название книги: " << _object.getName() << endl;
+	cout << "Автор: " << _author << endl;
+	cout << "Год выпуска: " << _year << endl;
+	cout << "Аннотация: " << _descrip << endl;
+	cout << "Жанр: " << _genre << endl;
+	cout << "Объем страниц: " << _page_cnt << endl;
+	cout << "Цена: " << _price << endl;
 }
 
 void Book::Edit()
 {
+	string line;
+	int num;
+	double dnum;
+
+	cout << "Введите наименование: ";
+	cin >> line;
+	_object.name(line);
+
+	cout << "Введите автора: ";
+	cin >> line;
+	_author = line;
+
+	cout << "Год: ";
+	cin >> num;
+	_year = num;
+
+	cout << "Введите аннотацию: ";
+	cin >> line;
+	_descrip = line;
+
+	cout << "Введите жанр: ";
+	cin >> line;
+	_genre = line;
+
+	cout << "Введите объем страниц: ";
+	cin >> num;
+	_page_cnt = num;
+
+	cout << "Введите цену: ";
+	cin >> dnum;
+	_price = dnum;
 }
 
 

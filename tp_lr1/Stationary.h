@@ -29,7 +29,7 @@ public:
 	double getPrice();
 
 	virtual int GetID() override;
-	virtual string GetInfo() override;
+	virtual void GetInfo() override;
 	virtual void Edit() override;
 
 private:

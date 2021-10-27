@@ -72,14 +72,41 @@ double Stationary::getPrice()
 
 int Stationary::GetID()
 {
-	return 0;
+	return 3;
 }
 
-string Stationary::GetInfo()
+void Stationary::GetInfo()
 {
-	return string();
+	cout << "Наименования канцелярии: " << _object.getName() << endl;
+	cout << "Тип: " << _type << endl;
+	cout << "Предназначение: " << _purpose << endl;
+	cout << "Цвет: " << _colour << endl;
+	cout << "Цена: " << _price << endl;
 }
 
 void Stationary::Edit()
 {
+
+	string line;
+	double dnum;
+
+	cout << "Введите наименование: ";
+	cin >> line;
+	_object.name(line);
+
+	cout << "Введите тип: ";
+	cin >> line;
+	_type = line;
+
+	cout << "Введите предназначение: ";
+	cin >> line;
+	_purpose = line;
+
+	cout << "Введите цвет: ";
+	cin >> line;
+	_colour = line;
+
+	cout << "Введите цену: ";
+	cin >> dnum;
+	_price = dnum;
 }

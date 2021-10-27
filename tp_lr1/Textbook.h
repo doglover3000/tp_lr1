@@ -1,6 +1,7 @@
 #pragma once
 #pragma once
 #include <iostream>
+#include <locale>
 #include "Base.h"
 #include "Object.h"
 using namespace std;
@@ -35,7 +36,7 @@ public:
 	double getPrice();
 
 	virtual int GetID() override;
-	virtual string GetInfo() override;
+	virtual void GetInfo() override;
 	virtual void Edit() override;
 
 private:

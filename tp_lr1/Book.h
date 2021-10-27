@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <locale>
 #include "Base.h"
 #include "Object.h"
 using namespace std;
@@ -17,15 +18,15 @@ public:
 	~Book();
 
 	void setName(string& name);
+	void setAuthor(string& auth);
 	void setYear(int& year);
-	void setReleaseDate(string& release);
 	void setDescription(string& desc);
 	void setGenre(string& genre);
 	void setPageCount(int& pages);
 	void setPrice(double& price);
 
 	string getName();
-	string getReleaseDate();
+	string getAuthor();
 	string getDescription();
 	string getGenre();
 	int getYear();
@@ -33,13 +34,13 @@ public:
 	double getPrice();
 
 	virtual int GetID() override;
-	virtual string GetInfo() override;
+	virtual void GetInfo() override;
 	virtual void Edit() override;
 
 private:
 	Object _object;
 	int _year;
-	string _release;
+	string _author;
 	string _descrip;
 	string _genre;
 	int _page_cnt;
