@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Stationary.cpp" />
     <ClCompile Include="Textbook.cpp" />
@@ -148,6 +149,8 @@
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Book.h" />
+    <ClInclude Include="ObjectofKeeper.h" />
+    <ClInclude Include="Keeper.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Stationary.h" />
     <ClInclude Include="Textbook.h" />
