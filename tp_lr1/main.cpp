@@ -62,6 +62,14 @@ int main()
 void Print(Keeper& keeper)
 {
 	system("cls");
+
+	if (keeper.getsize() == 0)
+	{
+		cout << "Base is empty!";
+		_getch();
+		return;
+	}
+	
 	for (int i = 0; i < keeper.getsize(); i++)
 	{
 		cout << "[" << i << "] ";
@@ -99,30 +107,55 @@ void AddObject(Keeper& keeper)
 	keeper.add(*tmp);
 	tmp = nullptr;
 	delete tmp;
+	cout << "Object added!";
 	_getch();
 }
 
 void RemoveObject(Keeper& keeper)
 {
+	int entered;
 	system("cls");
-	cout << "no";
+	if (keeper.getsize() == 0)
+	{
+		cout << "Base is empty!";
+		_getch();
+		return;
+	}
+	cout << "Enter index of object to delete: ";
+	cin >> entered;
+	keeper.remove(entered);
+	cout << "Object removed!";
 	_getch();
 }
 
 void EditObject(Keeper& keeper)
 {
-	int entered;
 	system("cls");
+	if (keeper.getsize() == 0)
+	{
+		cout << "Base is empty!";
+		_getch();
+		return;
+	}
+	int entered;
 	cout << "Enter index of object: ";
 	cin >> entered;
 	keeper[entered].Edit();
+	cout << "Done!";
 	_getch();
 }
 
 void RemoveAllObjects(Keeper& keeper)
 {
 	system("cls");
-	cout << "no";
+	if (keeper.getsize() == 0)
+	{
+		cout << "Base is empty!";
+		_getch();
+		return;
+	}
+	keeper.remove_all();
+	cout << "Base is now empty!";
 	_getch();
 }
 

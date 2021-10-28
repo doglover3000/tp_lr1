@@ -84,6 +84,7 @@ void Keeper::remove_all()
 		delete tmp2->_object;
 		delete tmp2;
 	}
+	_size = 0;
 }
 
 int Keeper::getsize()
