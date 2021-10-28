@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Keeper.cpp" />
+    <ClCompile Include="Loader.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Saver.cpp" />
     <ClCompile Include="Stationary.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Book.h" />
+    <ClInclude Include="Loader.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="ObjectofKeeper.h" />
     <ClInclude Include="Keeper.h" />

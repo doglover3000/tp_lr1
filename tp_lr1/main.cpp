@@ -7,6 +7,7 @@
 #include "Textbook.h"
 #include "Keeper.h"
 #include "Saver.h"
+#include "Loader.h"
 
 void Print(Keeper& keeper);
 void AddObject(Keeper& keeper);
@@ -22,6 +23,7 @@ int main()
 
 	int menu, entered = 0;
 	Keeper keeper;
+	Load(keeper);
 
 	while (true)
 	{
