@@ -1,6 +1,7 @@
 #pragma once
 #pragma once
 #include <iostream>
+#include <string>
 #include <locale>
 #include "Base.h"
 #include "Object.h"
@@ -21,19 +22,19 @@ public:
 
 	void setName(string& name);
 	void setAuthor(string& auth);
-	void setYear(int& year);
+	void setYear(string& year);
 	void setSchool(string& sch);
-	void setYearofStudy(int& styear);
-	void setPageCount(int& pages);
-	void setPrice(double& price);
+	void setYearofStudy(string& styear);
+	void setPageCount(string& pages);
+	void setPrice(string& price);
 
 	string getName();
 	string getAuthor();
 	string getSchool();
-	int getYear();
-	int getYearofStudy();
-	int getPageCount();
-	double getPrice();
+	string getYear();
+	string getYearofStudy();
+	string getPageCount();
+	string getPrice();
 
 	virtual int GetID() override;
 	virtual void GetInfo() override;
@@ -42,10 +43,10 @@ public:
 private:
 	Object _object;
 	string _author;
-	int _year;
+	string _year;
 	string _school;
-	int _study_year;
-	int _page_cnt;
-	double _price;
+	string _study_year;
+	string _page_cnt;
+	string _price;
 
 };

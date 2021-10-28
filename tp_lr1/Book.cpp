@@ -2,12 +2,12 @@
 
 Book::Book()
 {
-	_year = 0;
+	_year = "0";
 	_author = "no author date";
 	_descrip = "no book description";
 	_genre = "no genre";
-	_page_cnt = 0;
-	_price = 0;
+	_page_cnt = "0";
+	_price = "0";
 }
 
 Book::~Book()
@@ -23,7 +23,7 @@ void Book::setName(string& name)
 	_object.name(name);
 }
 
-void Book::setYear(int& year)
+void Book::setYear(string& year)
 {
 	_year = year;
 }
@@ -43,12 +43,12 @@ void Book::setGenre(string& genre)
 	_genre = genre;
 }
 
-void Book::setPageCount(int& pages)
+void Book::setPageCount(string& pages)
 {
 	_page_cnt = pages;
 }
 
-void Book::setPrice(double& price)
+void Book::setPrice(string& price)
 {
 	_price = price;
 }
@@ -73,23 +73,21 @@ string Book::getGenre()
 	return _genre;
 }
 
-int Book::getYear()
+string Book::getYear()
 {
 	return _year;
 }
 
-int Book::getNumberofPages()
+string Book::getNumberofPages()
 {
 	return _page_cnt;
 }
 
-double Book::getPrice()
+string Book::getPrice()
 {
 	return _price;
 }
 
-
-// ДОБАВИТЬ ЭТО
 
 int Book::GetID()
 {
@@ -98,48 +96,47 @@ int Book::GetID()
 
 void Book::GetInfo()
 {
-	cout << "Название книги: " << _object.getName() << endl;
-	cout << "Автор: " << _author << endl;
-	cout << "Год выпуска: " << _year << endl;
-	cout << "Аннотация: " << _descrip << endl;
-	cout << "Жанр: " << _genre << endl;
-	cout << "Объем страниц: " << _page_cnt << endl;
-	cout << "Цена: " << _price << endl;
+	cout << "Book title: " << _object.getName() << endl;
+	cout << "Author: " << _author << endl;
+	cout << "Release year: " << _year << endl;
+	cout << "Description: " << _descrip << endl;
+	cout << "Genre: " << _genre << endl;
+	cout << "Number of pages: " << _page_cnt << endl;
+	cout << "Price: " << _price << endl;
+
 }
 
 void Book::Edit()
 {
 	string line;
-	int num;
-	double dnum;
 
-	cout << "Введите наименование: ";
-	cin >> line;
+	cout << "Enter book title: ";
+	getline(cin, line);
 	_object.name(line);
 
-	cout << "Введите автора: ";
-	cin >> line;
+	cout << "Enter author: ";
+	getline(cin, line);
 	_author = line;
 
-	cout << "Год: ";
-	cin >> num;
-	_year = num;
+	cout << "Enter year: ";
+	getline(cin, line);
+	_year = line;
 
-	cout << "Введите аннотацию: ";
-	cin >> line;
+	cout << "Enter discription: ";
+	getline(cin, line);
 	_descrip = line;
 
-	cout << "Введите жанр: ";
-	cin >> line;
+	cout << "Enter genre: ";
+	getline(cin, line);
 	_genre = line;
 
-	cout << "Введите объем страниц: ";
-	cin >> num;
-	_page_cnt = num;
+	cout << "Enter number of pages: ";
+	getline(cin, line);
+	_page_cnt = line;
 
-	cout << "Введите цену: ";
-	cin >> dnum;
-	_price = dnum;
+	cout << "Enter price: ";
+	getline(cin, line);
+	_price = line;
 }
 
 

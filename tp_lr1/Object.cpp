@@ -22,5 +22,5 @@ void Object::name(string& name)
 
 string Object::getName()
 {
-	return string();
+	return objName;
 }

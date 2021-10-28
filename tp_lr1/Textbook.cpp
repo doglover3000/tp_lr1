@@ -3,11 +3,11 @@
 Textbook::Textbook()
 {
 	_author = "no author";
-	_year = 0;
+	_year = "0";
 	_school = "no school";
-	_study_year = 0;
-	_page_cnt = 0;
-	_price = 0;
+	_study_year = "0";
+	_page_cnt = "0";
+	_price = "0";
 }
 
 Textbook::~Textbook()
@@ -27,7 +27,7 @@ void Textbook::setAuthor(string& auth)
 	_author = auth;
 }
 
-void Textbook::setYear(int& year)
+void Textbook::setYear(string& year)
 {
 	_year = year;
 }
@@ -37,17 +37,17 @@ void Textbook::setSchool(string& sch)
 	_school = sch;
 }
 
-void Textbook::setYearofStudy(int& styear)
+void Textbook::setYearofStudy(string& styear)
 {
 	_study_year = styear;
 }
 
-void Textbook::setPageCount(int& pages)
+void Textbook::setPageCount(string& pages)
 {
 	_page_cnt = pages;
 }
 
-void Textbook::setPrice(double& price)
+void Textbook::setPrice(string& price)
 {
 	_price = price;
 }
@@ -67,28 +67,25 @@ string Textbook::getSchool()
 	return _school;
 }
 
-int Textbook::getYear()
+string Textbook::getYear()
 {
 	return _year;
 }
 
-int Textbook::getYearofStudy()
+string Textbook::getYearofStudy()
 {
 	return _study_year;
 }
 
-int Textbook::getPageCount()
+string Textbook::getPageCount()
 {
 	return _page_cnt;
 }
 
-double Textbook::getPrice()
+string Textbook::getPrice()
 {
 	return _price;
 }
-
-
-//ЭТО ТОЖЕ ДОБАВИТЬЬ
 
 int Textbook::GetID()
 {
@@ -97,46 +94,44 @@ int Textbook::GetID()
 
 void Textbook::GetInfo()
 {
-	cout << "Название книги: " << _object.getName() << endl;
-	cout << "Автор: " << _author << endl;
-	cout << "Год выпуска: " << _year << endl;
-	cout << "Для какого учебного заведения предназначено: " << _school << endl;
-	cout << "Год обучения: " << _study_year << endl;
-	cout << "Объем страниц: " << _page_cnt << endl;
-	cout << "Цена: " << _price << endl;
+	cout << "Texbook title: " << _object.getName() << endl;
+	cout << "Author: " << _author << endl;
+	cout << "Release year: " << _year << endl;
+	cout << "Type of educational institution: " << _school << endl;
+	cout << "Year of studing: " << _study_year << endl;
+	cout << "Number of pages: " << _page_cnt << endl;
+	cout << "Price: " << _price << endl;
 }
 
 void Textbook::Edit()
 {
 	string line;
-	int num;
-	double dnum;
 
-	cout << "Введите наименование: ";
-	cin >> line;
+	cout << "Enter texbook title: ";
+	getline(cin, line);
 	_object.name(line);
 
-	cout << "Введите автора: ";
-	cin >> line;
+	cout << "Enter author: ";
+	getline(cin, line);
 	_author = line;
 
-	cout << "Год: ";
-	cin >> num;
-	_year = num;
+	cout << "Enter release year: ";
+	getline(cin, line);
+	_year = line;
 
-	cout << "Введите учебное заведение: ";
-	cin >> line;
+	cout << "Enter type of educational institution: ";
+	getline(cin, line);
 	_school = line;
 
-	cout << "Введите год обучения: ";
-	cin >> num;
-	_study_year = num;
+	cout << "Enter year of studing: ";
+	getline(cin, line);
+	_study_year = line;
 
-	cout << "Введите объем страниц: ";
-	cin >> num;
-	_page_cnt = num;
+	cout << "Enter number of pages: ";
+	getline(cin, line);
+	_page_cnt = line;
 
-	cout << "Введите цену: ";
-	cin >> dnum;
-	_price = dnum;
+	cout << "Enter price: ";
+	getline(cin, line);
+	_price = line;
 }

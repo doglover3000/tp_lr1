@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #include "Base.h"
 #include "Object.h"
 using namespace std;
@@ -20,13 +21,13 @@ public:
 	void setType(string& type);
 	void setColour(string& color);
 	void setPurpose(string& purp);
-	void setPrice(double& price);
+	void setPrice(string& price);
 
 	string getName();
 	string getType();
 	string getColour();
 	string getPurpose();
-	double getPrice();
+	string getPrice();
 
 	virtual int GetID() override;
 	virtual void GetInfo() override;
@@ -37,6 +38,6 @@ private:
 	string _type;
 	string _colour;
 	string _purpose;
-	double _price;
+	string _price;
 
 };

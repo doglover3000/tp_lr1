@@ -5,7 +5,7 @@ Stationary::Stationary()
 	_type = "no type";
 	_colour = "no colour";
 	_purpose = "no purpose";
-	_price = 0;
+	_price = "0";
 }
 
 Stationary::~Stationary()
@@ -36,7 +36,7 @@ void Stationary::setPurpose(string& purp)
 	_purpose = purp;
 }
 
-void Stationary::setPrice(double& price)
+void Stationary::setPrice(string& price)
 {
 	_price = price;
 }
@@ -61,14 +61,10 @@ string Stationary::getPurpose()
 	return _purpose;
 }
 
-double Stationary::getPrice()
+string Stationary::getPrice()
 {
 	return _price;
 }
-
-
-///ЕЩЕ ДОБАВИТЬ
-
 
 int Stationary::GetID()
 {
@@ -77,36 +73,34 @@ int Stationary::GetID()
 
 void Stationary::GetInfo()
 {
-	cout << "Наименования канцелярии: " << _object.getName() << endl;
-	cout << "Тип: " << _type << endl;
-	cout << "Предназначение: " << _purpose << endl;
-	cout << "Цвет: " << _colour << endl;
-	cout << "Цена: " << _price << endl;
+	cout << "Stationary name: " << _object.getName() << endl;
+	cout << "Stationary type: " << _type << endl;
+	cout << "Purpose: " << _purpose << endl;
+	cout << "Colour: " << _colour << endl;
+	cout << "Price: " << _price << endl;
 }
 
 void Stationary::Edit()
 {
-
 	string line;
-	double dnum;
 
-	cout << "Введите наименование: ";
-	cin >> line;
+	cout << "Enter stationary name: ";
+	getline(cin, line);
 	_object.name(line);
 
-	cout << "Введите тип: ";
-	cin >> line;
+	cout << "Enter stationary type: ";
+	getline(cin, line);
 	_type = line;
 
-	cout << "Введите предназначение: ";
-	cin >> line;
+	cout << "Enter purpose: ";
+	getline(cin, line);
 	_purpose = line;
 
-	cout << "Введите цвет: ";
-	cin >> line;
+	cout << "Enter colour: ";
+	getline(cin, line);
 	_colour = line;
 
-	cout << "Введите цену: ";
-	cin >> dnum;
-	_price = dnum;
+	cout << "Enter price: ";
+	getline(cin, line);
+	_price = line;
 }
