@@ -86,6 +86,7 @@ void Stationary::Edit()
 
 	cout << "Enter stationary name: ";
 	getline(cin, line);
+	getline(cin, line);
 	_object.name(line);
 
 	cout << "Enter stationary type: ";

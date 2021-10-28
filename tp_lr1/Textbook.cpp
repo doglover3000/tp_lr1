@@ -109,6 +109,7 @@ void Textbook::Edit()
 
 	cout << "Enter texbook title: ";
 	getline(cin, line);
+	getline(cin, line);
 	_object.name(line);
 
 	cout << "Enter author: ";

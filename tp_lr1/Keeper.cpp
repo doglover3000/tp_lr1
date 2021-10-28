@@ -89,3 +89,17 @@ int Keeper::getsize()
 {
 	return _size;
 }
+
+Base& Keeper::operator[](const int i)
+{
+	if (i > _size || i < 0)
+	{
+		throw "ÍÅÂÅÐÍÛÉ ÈÍÄÅÊÑ";
+	}
+
+	ObjectofKeeper* tmp = _first;
+	for (int j = 0; j < i; j++)
+		tmp = tmp->_nextobj;
+	return *(tmp->_object);
+}
+

@@ -13,6 +13,8 @@ public:
 	void remove_all();
 	int getsize();
 
+	Base& operator[](const int i);
+
 private:
 	int _size;
 	ObjectofKeeper* _first;

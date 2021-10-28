@@ -112,6 +112,7 @@ void Book::Edit()
 
 	cout << "Enter book title: ";
 	getline(cin, line);
+	getline(cin, line);
 	_object.name(line);
 
 	cout << "Enter author: ";
