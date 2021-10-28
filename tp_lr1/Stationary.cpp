@@ -14,6 +14,7 @@ Stationary::~Stationary()
 	_type.~basic_string();
 	_colour.~basic_string();
 	_purpose.~basic_string();
+	_price.~basic_string();
 }
 
 void Stationary::setName(string& name)

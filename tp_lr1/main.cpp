@@ -21,7 +21,6 @@ int main()
 	setlocale(LC_ALL,"Rus");
 
 	int menu, entered = 0;
-	string line = "----------------------------------------\n";
 	Keeper keeper;
 
 	while (true)
@@ -42,29 +41,19 @@ int main()
 		case 0:
 			return 0;
 		case 1:
-			cout << line;
 			Print(keeper);
-			cout << line;
 			break;
 		case 2:
-			cout << line;
 			AddObject(keeper);
-			cout << line;
 			break;
 		case 3:
-			cout << line;
 			RemoveObject(keeper);
-			cout << line;
 			break;
 		case 4:
-			cout << line;
 			EditObject(keeper);
-			cout << line;
 			break;
 		case 5:
-			cout << line;
 			RemoveAllObjects(keeper);
-			cout << line;
 			break;
 		}
 	}
@@ -95,16 +84,15 @@ void AddObject(Keeper& keeper)
 	system("cls");
 	cout << "1. Add new book\n2. Add new textbook\n3. Add new stationary\n>> ";
 	cin >> entered;
-	cout << "----------------------------------------\n";
 	Base* tmp = &Create(entered);
 
 	system("cls");
 
 	if (entered != 1 && entered != 2 && entered != 3)
 	{
-			cout << "Wrong number!" << endl;
-			delete tmp;
-			return;
+		cout << "Wrong number!" << endl;
+		delete tmp;
+		return;
 	}
 	cin.clear();
 	tmp->Edit();

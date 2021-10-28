@@ -16,6 +16,8 @@ Book::~Book()
 	_author.~basic_string();
 	_descrip.~basic_string();
 	_genre.~basic_string();
+	_page_cnt.~basic_string();
+	_price.~basic_string();
 }
 
 void Book::setName(string& name)

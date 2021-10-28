@@ -35,6 +35,7 @@ void Keeper::add(Base& obj)
 		tmp = tmp->_nextobj;
 	ObjectofKeeper* newobj = new ObjectofKeeper;
 	newobj->_object = &obj;
+	newobj->_nextobj = nullptr;
 	tmp->_nextobj = newobj;
 	_size++;
 }

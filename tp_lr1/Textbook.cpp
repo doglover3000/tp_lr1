@@ -14,7 +14,11 @@ Textbook::~Textbook()
 {
 	_object.~Object();
 	_author.~basic_string();
+	_year.~basic_string();
 	_school.~basic_string();
+	_study_year.~basic_string();
+	_page_cnt.~basic_string();
+	_price.~basic_string();
 }
 
 void Textbook::setName(string& name)
