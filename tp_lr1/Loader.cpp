@@ -5,7 +5,8 @@ void Load(Keeper& keeper)
 	ifstream in("data.txt");
 	if (!in.is_open())
 	{
-		cout << "Can't open base!";
+		cout << "Can't open base! Empty base created.";
+		_getch();
 		return;
 	}
 
@@ -19,16 +20,12 @@ void Load(Keeper& keeper)
 		else if (line == "3")
 			(new StationaryLoader)->Load(in, keeper);
 	}
-		
+	cout << "Base successfully loaded!";
+	_getch();		
 }
 
 void BookLoader::Load(ifstream& in, Keeper& keeper)
 {
-	if (!in.is_open())
-	{
-		cout << "Can't open base!";
-		return;
-	}
 	string line;
 	Book* tmp = new Book;
 	getline(in, line);
@@ -50,11 +47,6 @@ void BookLoader::Load(ifstream& in, Keeper& keeper)
 
 void TextbookLoader::Load(ifstream& in, Keeper& keeper)
 {
-	if (!in.is_open())
-	{
-		cout << "Can't open base!";
-		return;
-	}
 	string line;
 	Textbook* tmp = new Textbook;
 	getline(in, line);
@@ -76,11 +68,6 @@ void TextbookLoader::Load(ifstream& in, Keeper& keeper)
 
 void StationaryLoader::Load(ifstream& in, Keeper& keeper)
 {
-	if (!in.is_open())
-	{
-		cout << "Can't open base!";
-		return;
-	}
 	string line;
 	Stationary* tmp = new Stationary;
 	getline(in, line);
