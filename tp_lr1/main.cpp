@@ -6,7 +6,7 @@
 #include "Stationary.h"
 #include "Textbook.h"
 #include "Keeper.h"
-#include "main.h"
+#include "Saver.h"
 
 void Print(Keeper& keeper);
 void AddObject(Keeper& keeper);
@@ -39,6 +39,7 @@ int main()
 		default:
 			break;
 		case 0:
+			Save(keeper);
 			return 0;
 		case 1:
 			Print(keeper);
